@@ -14,8 +14,21 @@
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
         }
         h1, h2, h3 {
             margin: 0;
@@ -30,24 +43,17 @@
         .education, .experience, .skills {
             border-top: 1px solid #ccc;
         }
-        /* Style for the video */
-        #header-video {
-            width: 100%;
-            max-width: 500px; /* Adjust the width as needed */
-            margin: 0 auto;
-            display: block;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <h2>Curriculum Vitae</h2>
         <!-- Add your MP4 video here -->
-        <video id="header-video" controls>
-            <source src="Hubble.mp4" type="video/mp4">
+        <video autoplay muted loop>
+            <source src="yourvideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <h1>Your Name</h1>
+        <h2>Curriculum Vitae</h2>
     </header>
     
     <section class="contact-info">
@@ -76,4 +82,8 @@
             <li>Skill 1</li>
             <li>Skill 2</li>
             <li>Skill 3</li>
-            <!-- A
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+</body>
+</html>
