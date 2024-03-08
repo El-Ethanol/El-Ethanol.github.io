@@ -3,120 +3,17 @@
 
 <head>
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Imagenes/atomo.png">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Campos Méndez - Physicist in Progress</title>
+    <title>Ethan Campos - Physicist </title>
     <style>
-        .poppins-thin {
-            font-family: "Poppins", sans-serif;
-            font-weight: 100;
-            font-style: normal;
-            }
-
-        .poppins-extralight {
-            font-family: "Poppins", sans-serif;
-            font-weight: 200;
-            font-style: normal;
-            }
-
-        .poppins-light {
-            font-family: "Poppins", sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            }
-
-        .poppins-regular {
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            }
-
-        .poppins-medium {
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            }
-
-        .poppins-semibold {
-            font-family: "Poppins", sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            }
-
-        .poppins-bold {
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            }
-
-        .poppins-extrabold {
-            font-family: "Poppins", sans-serif;
-            font-weight: 800;
-            font-style: normal;
-            }
-
-        .poppins-black {
-            font-family: "Poppins", sans-serif;
-            font-weight: 900;
-            font-style: normal;
-            }
-
-        .poppins-thin-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 100;
-            font-style: italic;
-            }
-
-        .poppins-extralight-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 200;
-            font-style: italic;
-            }
-
-        .poppins-light-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 300;
-            font-style: italic;
-            }
-
-        .poppins-regular-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: italic;
-            }
-
-        .poppins-medium-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-style: italic;
-            }
-
-        .poppins-semibold-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 600;
-            font-style: italic;
-            }
-        .poppins-bold-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-style: italic;
-            }
-
-        .poppins-extrabold-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 800;
-            font-style: italic;
-            }
-
-        .poppins-black-italic {
-            font-family: "Poppins", sans-serif;
-            font-weight: 900;
-            font-style: italic;
-        }
         body {
             font-family: Poppins, sans-serif;
             margin: 0;
@@ -152,9 +49,36 @@
             margin-bottom: 10px; /* Optional: Add some bottom margin */
         }
         .header-content h2 {
-            text-align: left;
+            text-align: center;
             font-size: 2em; /* Adjust the font size for h2 */
             margin-bottom: 20px; /* Optional: Add some bottom margin */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .tabs {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .tab {
+            margin-right: 0px;
+        }
+        .tab a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tab a:hover {
+            background-color: #555;
         }
         h1, h2, h3 {
             margin: 0;
@@ -185,7 +109,7 @@
         }
         .caption {
             margin: 5px 0;
-            text-align: center;
+            text-align: left;
             font-size: 1em; /* Adjust as needed */
             color: #555; /* Optional: Change color of the caption */
         }
@@ -198,10 +122,17 @@
             Your browser does not support the video tag.
           </video>
         <div class="header-content">
+            <ul class="tabs">
+                <li class="tab"><a href="#section1">Section 1</a></li>
+                <li class="tab"><a href="#section2">Section 2</a></li>
+                <li class="tab"><a href="#section3">Section 3</a></li>
+            </ul>
             <h1>Ethan Campos Méndez</h1>
             <h2>Physicist</h2>
             <h2>PhD Student at University of Southampton</h2>
+            
         </div>
+
     </header>
     
     <section class="contact-info">
@@ -211,7 +142,7 @@
         </div>
         <div>
             <h2>Contact Information</h2>
-            <p>Email: el.ethanol.cm@gmail.com</p>
+            <p>Email: <a href="mailto:el.ethanol.cm@gmail.com">el.ethanol.cm@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ethan-campos-mendez/" target="_blank">Your Profile</a></p>
         </div>
     </section>
