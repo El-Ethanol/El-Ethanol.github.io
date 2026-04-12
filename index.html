@@ -180,6 +180,11 @@
     .footer-links { display: flex; gap: var(--space-4); }
     .footer-links a { font-size: var(--text-xs); color: var(--color-text-faint); transition: color var(--transition); }
     .footer-links a:hover { color: var(--color-text); }
+    .footer-left { display: flex; flex-direction: column; gap: 4px;}
+    .footer-pplx { display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; opacity: 0.6; transition: opacity 180ms ease;  text-decoration: none;}
+    .footer-pplx:hover {opacity: 1;}
+    .footer-pplx img { filter: grayscale(1); transition: filter 180ms ease;}
+    .footer-pplx:hover img { filter: grayscale(0);}
 
     /* ===== MOBILE ===== */
     @media (max-width: 767px) {
@@ -203,11 +208,9 @@
     <div class="container--wide">
       <nav>
         <a href="#" class="nav-logo" aria-label="Ethan Campos Méndez — Home">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-            <rect width="28" height="28" rx="6" fill="var(--color-primary)"/>
-            <text x="14" y="20" text-anchor="middle" font-family="serif" font-size="16" fill="white" font-style="italic">E</text>
-          </svg>
-          Ethan Campos
+           <img src="./Imagenes/Logo.svg" alt="" aria-hidden="true" width="100" height="100"
+       style="object-fit: contain;">
+          Ethan Campos Méndez
         </a>
         <ul class="nav-links" role="list">
           <li><a href="#research">Research</a></li>
@@ -224,14 +227,6 @@
             <span></span><span></span><span></span>
           </button>
         </div>
-      </nav>
-      <div class="mobile-menu" role="navigation">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#writing">Writing</a>
-        <a href="#cv">CV</a>
-        <a href="#links">Links</a>
-      </div>
     </div>
   </header>
 
@@ -242,7 +237,7 @@
         <div class="hero-grid">
           <div class="hero-content">
             <p class="hero-tag">Theoretical Physics · PhD Student</p>
-            <h1>Foundations of <br><em>quantum mechanics,</em><br> and open systems.</h1>
+            <h1>Open quantum systems, and foundations of <br><em>quantum mechanics.</em><br></h1>
             <p class="hero-bio">
               I work at the intersection of quantum field theory, open quantum systems, and the foundations of quantum mechanics. Based at the University of Southampton.
             </p>
@@ -364,12 +359,12 @@
         <div class="writing-feature">
           <div class="writing-text">
             <p>
-              Beyond research papers, I write about quantum physics, the foundations of mechanics, and science more broadly — for an audience that wants depth without the jargon overhead.
+             Beyond my PhD, I write about the questions that keep me up at night — why quantum mechanics is so strange, what spacetime actually is, and why physics still has more mysteries than answers. <br><em>No equations required.</em><br>
             </p>
             <p style="margin-bottom: var(--space-6);">
-              Subscribe to my Substack for essays on quantum mechanics, relativity, and the ideas that keep me up at night.
+              Fair warning: my Substack asks more questions than it answers. Pull up a chair, subscribe and let's figure thing out together.
             </p>
-            <a href="https://substack.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display:inline-flex;">
+            <a href="https://substack.com/@superposedheretic" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display:inline-flex;">
               Read on Substack →
             </a>
           </div>
@@ -381,18 +376,17 @@
                 </svg>
               </div>
               <div>
-                <div class="writing-card-title">Quantum Foundations</div>
-                <div class="writing-card-subtitle">Your Substack · replace with your actual newsletter name</div>
+                <div class="writing-card-title">Confessions of a Superposed Heretic</div>
               </div>
             </div>
             <div class="writing-posts">
               <div class="writing-post">
-                <div class="writing-post-title">What does collapse actually mean?</div>
-                <div class="writing-post-meta">Replace with your latest post · date</div>
+                <div class="writing-post-title">Confessions of a Superposed Heretic</div>
+                <div class="writing-post-meta">April 2026</div>
               </div>
         
             </div>
-            <a href="https://substack.com" class="btn btn-ghost" style="width:100%; justify-content:center; font-size: var(--text-xs);" target="_blank" rel="noopener noreferrer">
+            <a href="https://substack.com/@superposedheretic" class="btn btn-ghost" style="width:100%; justify-content:center; font-size: var(--text-xs);" target="_blank" rel="noopener noreferrer">
               View all posts on Substack
             </a>
           </div>
@@ -410,7 +404,8 @@
             <p class="section-label">CV</p>
             <h2 class="section-title" style="margin-bottom:0">Education & experience</h2>
           </div>
-          <a href="#" class="btn btn-ghost" style="margin-top: var(--space-6);">
+          <a href="./CV_Ethan_2.pdf" 
+          download="CV_Ethan_2.pdf" class="btn btn-ghost" style="margin-top: var(--space-6);">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download PDF
           </a>
@@ -420,7 +415,9 @@
             <div class="cv-date">2022 – present</div>
             <div>
               <div class="cv-entry-title">PhD in Theoretical Physics</div>
-              <div class="cv-entry-sub">University of Southampton · Supervisor: [Your Supervisor]</div>
+              <div class="cv-entry-sub">University of Southampton · Supervisor: <a href="https://ivettefuentes.weebly.com" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline;">
+                Prof. Ivette Fuentes
+              </a></div>
             </div>
           </div>
           
@@ -428,23 +425,11 @@
             <div class="cv-date">2018 – 2021</div>
             <div>
               <div class="cv-entry-title">BSc in Physics</div>
-              <div class="cv-entry-sub">[Your Institution]</div>
+              <div class="cv-entry-sub">Universidad Nacional Autonoma de México (UNAM) · First Class Honours
+              </div>
             </div>
           </div>
-          <div class="cv-row">
-            <div class="cv-date">2024</div>
-            <div>
-              <div class="cv-entry-title">Conference talk · [Conference Name]</div>
-              <div class="cv-entry-sub">"[Your talk title]" · [City]</div>
-            </div>
-          </div>
-          <div class="cv-row">
-            <div class="cv-date">2023</div>
-            <div>
-              <div class="cv-entry-title">Teaching · [Module name]</div>
-              <div class="cv-entry-sub">University of Southampton · Teaching assistant</div>
-            </div>
-          </div>
+  
         </div>
       </div>
     </section>
@@ -500,17 +485,21 @@
   </main>
 
   <footer>
-    <div class="container--wide">
-      <div class="footer-inner">
-        <span class="footer-copy">© 2026 Ethan Campos Méndez · University of Southampton</span>
-        <div class="footer-links">
-          <a href="mailto:ecm1n23@soton.ac.uk">Contact</a>
-          <a href="#research">Research</a>
-          <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
-        </div>
+  <div class="container--wide">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Ethan Campos Méndez · University of Southampton</span>
+      <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer" class="footer-pplx">
+          <img src="https://cdn.simpleicons.org/perplexity" alt="Perplexity AI" width="13" height="13" loading="lazy">
+          Built with Perplexity
+        </a>
+      <div class="footer-links">
+        <a href="mailto:ecm1n23@soton.ac.uk">Contact</a>
+        <a href="#research">Research</a>
+        <a href="https://substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script>
     (function(){

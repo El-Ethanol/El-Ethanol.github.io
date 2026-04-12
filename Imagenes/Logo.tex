@@ -1,0 +1,49 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\definecolor{cream}{RGB}{244,242,234}
+\definecolor{dkgreen}{RGB}{18,65,42}
+\definecolor{wlight}{RGB}{148,178,162}
+\definecolor{wmid}{RGB}{105,145,125}
+\definecolor{wfaint}{RGB}{190,205,196}
+
+\begin{document}
+\begin{tikzpicture}
+  \clip (0,0) rectangle (10,10);
+  \fill[cream] (0,0) rectangle (10,10);
+
+  % --- Interference wave lines ---
+  \draw[wfaint, line width=0.4pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {5.18 + 0.28*sin(deg(1.20*3.14159*\x + 0.0))});
+  \draw[wlight, line width=0.5pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {5.10 + 0.45*sin(deg(1.12*3.14159*\x + 0.4))});
+  \draw[wmid, line width=0.5pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {5.02 + 0.58*sin(deg(1.25*3.14159*\x + 0.9))});
+  \draw[wlight, line width=0.4pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {4.95 + 0.40*sin(deg(1.18*3.14159*\x + 1.6))});
+  \draw[wmid, line width=0.6pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {5.15 + 0.52*sin(deg(1.30*3.14159*\x + 2.3))});
+  \draw[wfaint, line width=0.3pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {5.06 + 0.35*sin(deg(1.10*3.14159*\x + 3.0))});
+  \draw[wlight, line width=0.4pt]
+    plot[domain=0:10, samples=200, smooth]
+    (\x, {4.88 + 0.62*sin(deg(1.22*3.14159*\x + 0.7))});
+
+  % --- Text ---
+  \node[dkgreen,text width=7cm, align=center] at (5, 5.90)
+    {{\fontsize{17}{21}\selectfont Confessions\hspace{0.6em}of\hspace{0.6em}a}};
+  \node[dkgreen,text width=7cm, align=center] at (5, 5.15)
+    {{\fontsize{25}{21}\selectfont\textbf{SUPERPOSED}}};
+  \node[dkgreen,text width=7cm, align=center] at (5, 4.30)
+    {{\fontsize{25}{21}\selectfont\textbf{HERETIC}}};
+
+\end{tikzpicture}
+\end{document}
