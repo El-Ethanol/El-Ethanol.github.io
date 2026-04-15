@@ -82,11 +82,11 @@
 
     /* ===== NAV ===== */
     header { position: sticky; top: 0; z-index: 100; background: color-mix(in oklab, var(--color-bg) 85%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid oklch(from var(--color-text) l c h / 0.07); }
-    nav { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-4); }
+    nav { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-8); }
     .nav-logo { display: flex; align-items: center; gap: var(--space-3); font-family: var(--font-display); font-size: var(--text-lg); letter-spacing: -0.01em; }
     .nav-logo svg { flex-shrink: 0; }
     .nav-links { display: flex; align-items: center; gap: var(--space-6); }
-    .nav-links a { font-size: var(--text-sm); color: var(--color-text-muted); transition: color var(--transition); }
+    .nav-links a { font-size: var(--text-base); color: var(--color-text-muted); transition: color var(--transition); }
     .nav-links a:hover { color: var(--color-text); }
     .nav-actions { display: flex; align-items: center; gap: var(--space-3); }
     .theme-toggle { display: flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: var(--radius-full); color: var(--color-text-muted); border: 1px solid oklch(from var(--color-text) l c h / 0.1); transition: color var(--transition), background var(--transition), border-color var(--transition); }
@@ -145,7 +145,7 @@
     .pub-badge { background: var(--color-primary-highlight); color: var(--color-primary); padding: 0.15rem 0.5rem; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; }
 
     /* ===== WRITING / SUBSTACK ===== */
-    .writing-feature { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
+    .writing-feature { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
     .writing-text { }
     .writing-text p { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; max-width: 48ch; margin-bottom: var(--space-6); }
     .writing-card { background: var(--color-surface); border: 1px solid oklch(from var(--color-text) l c h / 0.07); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-md); }
@@ -207,10 +207,14 @@
   <header>
     <div class="container--wide">
       <nav>
-        <a href="#" class="nav-logo" aria-label="Ethan Campos Méndez — Home">
-           <img src="./Imagenes/Logo_nbkg.svg" alt="" aria-hidden="true" width="200" height="200"
-       style="object-fit: contain;">
-          Ethan Campos Méndez
+        <a href="#" class="nav-logo" aria-label="Ethan Campos Méndez — Home"
+          style="flex-direction: column; align-items: flex-start; gap: 0; line-height: 1.2;">
+          <span style="font-family: var(--font-display); font-weight: 550; font-size: var(--text-lg);">
+            Ethan Campos Méndez
+          </span>
+          <span style="font-size: var(--text-xs); color: var(--color-text-muted); font-family: var(--font-body); font-weight: 400;">
+            Theoretical Physicist
+          </span>
         </a>
         <ul class="nav-links" role="list">
           <li><a href="#research">Research</a></li>
@@ -322,30 +326,27 @@
       <div class="container">
         <p class="section-label">Publications</p>
         <h2 class="section-title">Papers & preprints</h2>
-        <p class="section-subtitle">Add your published papers and arXiv preprints here. Update the entries below with your actual work.</p>
         <div class="pubs-list">
           <div class="pub-item">
-            <span class="pub-year">2025</span>
+            <span class="pub-year">2026</span>
             <div>
-              <div class="pub-title"> <!--Lorentz-covariant collapse models and the quantum-classical interface</div>-->
+              <div class="pub-title"> Gravitational self-reduction</div>
               <div class="pub-meta">
-                <span>E. Campos Méndez</span>
-                <span>·</span>
-                <span><em>Journal of Physics A</em></span>
-                <span class="pub-badge">preprint</span>
-                <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv:xxxx.xxxxx</a>
+                <span>E. Campos Méndez, et al.</span>
+                <span>.</span>
+                <span><em>In preparation</em></span>
               </div>
             </div>
           </div>
           <div class="pub-item">
-            <span class="pub-year">2024</span>
+            <span class="pub-year">2023</span>
             <div>
-              <div class="pub-title"> <!--Master equations for scalar fields in thermal curved spacetimes</div>-->
+              <div class="pub-title"> The Path Integral Formalism and some useful examples </div>
               <div class="pub-meta">
-                <span>E. Campos Méndez, A. Collaborator</span>
+                <span>E. Campos Méndez</span>
                 <span>·</span>
-                <span><em>Physical Review D</em></span>
-                <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv:xxxx.xxxxx</a>
+                <span><em> Phoebe</em></span>
+                <a href="https://phoebe.pubpub.org/pub/pf2xw4p6" target="_blank" rel="noopener noreferrer">View on Phoebe</a>
               </div>
             </div>
           </div>
@@ -362,6 +363,9 @@
         <h2 class="section-title">Science communication</h2>
         <div class="writing-feature">
           <div class="writing-text">
+            <p style="border-left: 3px solid var(--color-primary); padding-left: var(--space-4); font-style: italic; color: var(--color-text-muted); font-size: var(--text-base); line-height: 1.7; margin-bottom: var(--space-6);">
+              For people who find the universe suspicious.
+            </p>
             <p>
              Beyond my PhD, I write about the questions that keep me up at night — why quantum mechanics is so strange, what spacetime actually is, and why physics still has more mysteries than answers. <br><em>No equations required.</em><br>
             </p>
@@ -373,23 +377,25 @@
             </a>
           </div>
           <div class="writing-card">
-            <div class="writing-card-header">
-              <div class="substack-logo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="writing-card-title">Confessions of a Superposed Heretic</div>
-              </div>
+            <div style="display: flex; justify-content: center; margin-bottom: var(--space-4);">
+                <img src="Imagenes/Logo_nbkg.svg" alt="Confessions of a Superposed Heretic"
+                    width="150" height="150"
+                    style="border-radius: var(--radius-lg); object-fit: cover; box-shadow: var(--shadow-md);">
+            </div>
+            <div class="writing-card-header" style="justify-content: center; text-align: center;">
+                <div class="writing-card-title" style="text-align: center; font-size: var(--text-lg);">
+                  Confessions of a Superposed Heretic
+                </div>
             </div>
             <div class="writing-posts">
               <div class="writing-post">
-                <div class="writing-post-title">Confessions of a Superposed Heretic</div>
+                <div class="writing-post-title">Confession #0: Why I'm Here</div>
                 <div class="writing-post-meta">April 2026</div>
               </div>
-        
-            </div>
+             <!-- <div class="writing-post">
+                <div class="writing-post-title">Confession #1: Why the quantum measurement problem is still unsolved?</div>
+                <div class="writing-post-meta">April 2026</div>
+              </div> --> 
             <a href="https://substack.com/@superposedheretic" class="btn btn-ghost" style="width:100%; justify-content:center; font-size: var(--text-xs);" target="_blank" rel="noopener noreferrer">
               View all posts on Substack
             </a>
@@ -416,7 +422,7 @@
         </div>
         <div>
           <div class="cv-row">
-            <div class="cv-date">2022 – present</div>
+            <div class="cv-date">2024 – present</div>
             <div>
               <div class="cv-entry-title">PhD in Theoretical Physics</div>
               <div class="cv-entry-sub">University of Southampton · Supervisor: <a href="https://ivettefuentes.weebly.com" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline;">
@@ -447,31 +453,31 @@
         <h2 class="section-title">Find me elsewhere</h2>
         <p class="section-subtitle">Academic profiles, code repositories, and other useful places.</p>
         <div class="links-grid">
-          <a href="https://arxiv.org" class="link-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://arxiv.org/search/?searchtype=author&query=Campos-M%C3%A9ndez%2C+E" class="link-card" target="_blank" rel="noopener noreferrer">
             <div class="link-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             </div>
             <div><div class="link-name">arXiv</div><div class="link-desc">Preprints & papers</div></div>
           </a>
-          <a href="https://orcid.org" class="link-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://orcid.org/0009-0004-6008-4397" class="link-card" target="_blank" rel="noopener noreferrer">
             <div class="link-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M8 8h4a4 4 0 0 1 0 8H8z"/></svg>
             </div>
             <div><div class="link-name">ORCID</div><div class="link-desc">Researcher ID</div></div>
           </a>
-          <a href="https://github.com" class="link-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/El-Ethanol" class="link-card" target="_blank" rel="noopener noreferrer">
             <div class="link-icon" style="background: var(--color-surface-offset); color: var(--color-text);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             </div>
             <div><div class="link-name">GitHub</div><div class="link-desc">Code & simulations</div></div>
           </a>
-          <a href="https://substack.com" class="link-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://substack.com/@superposedheretic" class="link-card" target="_blank" rel="noopener noreferrer">
             <div class="link-icon" style="background: #FF6719; color: white;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
             </div>
             <div><div class="link-name">Substack</div><div class="link-desc">Science writing</div></div>
           </a>
-          <a href="https://scholar.google.com" class="link-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://scholar.google.co.uk/citations?hl=es&user=8iHBpr0AAAAJ&scilu=&scisig=ADQXK0wAAAAAad-tZHZiKvfSuwgj2rVBV8embdc&gmla=AEk_c1scIsbdSvZdDIleO3MqvMBykbWROCKnzoXhzjyONnclXZl4nevnKnQhhLeb4JKLL783mnIg05xPPqNRTwK0IdQ868zHfU0rjJQkmbFcrXNVvii9-ixrbA&sciund=15767784859731462568" class="link-card" target="_blank" rel="noopener noreferrer">
             <div class="link-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
